@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b-2 border-dashed border-sky bg-cream/95 backdrop-blur">
       <nav aria-label="Navigasi utama" className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <a href="#" className="flex min-h-11 items-center gap-2 font-display text-xl font-bold text-ink sm:text-2xl">
+        <a href="#" className="flex min-h-11 items-center gap-2 whitespace-nowrap font-display text-xl font-bold text-ink sm:text-2xl">
           <Image src={siteConfig.logo} alt="" width={36} height={36} className="h-9 w-9 rounded-full" />
           {siteConfig.name}
         </a>
@@ -42,7 +42,7 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <LinkButton href={wa} target="_blank" rel="noopener noreferrer" size="sm" className="hidden md:inline-flex">
+          <LinkButton href={wa} target="_blank" rel="noopener noreferrer" size="sm" className="max-md:hidden whitespace-nowrap">
             <WhatsAppIcon className="h-5 w-5" /> Order via WhatsApp
           </LinkButton>
           <button
@@ -58,22 +58,39 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {open && (
-        <div id="menu-mobile" className="border-t border-sky bg-cream px-4 pb-5 pt-2 md:hidden">
-          <ul>
-            {links.map((l) => (
-              <li key={l.href}>
-                <a href={l.href} onClick={() => setOpen(false)} className="flex min-h-12 items-center border-b border-dashed border-sky text-lg font-semibold">
-                  {l.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <LinkButton href={wa} target="_blank" rel="noopener noreferrer" className="mt-4 w-full">
-            <WhatsAppIcon className="h-5 w-5" /> Order via WhatsApp
-          </LinkButton>
+      <div
+        id="menu-mobile"
+        inert={!open}
+        className={`grid bg-cream transition-[grid-template-rows,opacity] duration-300 ease-out motion-reduce:transition-none md:hidden ${
+          open ? "grid-rows-[1fr] border-t border-sky opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <div className="px-4 pb-5 pt-2">
+            <ul>
+              {links.map((l, i) => (
+                <li
+                  key={l.href}
+                  style={{ transitionDelay: open ? `${80 + i * 60}ms` : "0ms" }}
+                  className={`transition-[opacity,transform] duration-300 motion-reduce:transition-none ${open ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"}`}
+                >
+                  <a href={l.href} onClick={() => setOpen(false)} className="flex min-h-12 items-center border-b border-dashed border-sky text-lg font-semibold">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <div
+              style={{ transitionDelay: open ? `${80 + links.length * 60}ms` : "0ms" }}
+              className={`transition-[opacity,transform] duration-300 motion-reduce:transition-none ${open ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"}`}
+            >
+              <LinkButton href={wa} target="_blank" rel="noopener noreferrer" className="mt-4 w-full">
+                <WhatsAppIcon className="h-5 w-5" /> Order via WhatsApp
+              </LinkButton>
+            </div>
+          </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
