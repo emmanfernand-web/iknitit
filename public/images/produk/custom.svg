@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img">
+<rect width="800" height="800" fill="#90CAF9"/>
+<circle cx="400" cy="450" r="290" fill="#F599C6" fill-opacity=".55"/>
+<polygon points="400.0,215.0 461.7,365.1 623.5,377.4 499.9,482.4 538.1,640.1 400.0,555.0 261.9,640.1 300.1,482.4 176.5,377.4 338.3,365.1" fill="#FFC349" stroke="#FEF2A0" stroke-width="10" stroke-linejoin="round"/>
+<polygon points="400.0,215.0 461.7,365.1 623.5,377.4 499.9,482.4 538.1,640.1 400.0,555.0 261.9,640.1 300.1,482.4 176.5,377.4 338.3,365.1" fill="none" stroke="#2B2F44" stroke-opacity=".45" stroke-width="6" stroke-dasharray="14 14" stroke-linecap="round" transform="translate(400 450) scale(.86) translate(-400 -450)"/>
+<text x="400" y="470" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="58" fill="#2B2F44">your idea</text>
+<path d="M165 280Q165 330 215 330Q165 330 165 380Q165 330 115 330Q165 330 165 280Z" fill="#7EC151"/><path d="M660 262Q660 300 698 300Q660 300 660 338Q660 300 622 300Q660 300 660 262Z" fill="#FEF2A0"/><path d="M640 594Q640 650 696 650Q640 650 640 706Q640 650 584 650Q640 650 640 594Z" fill="#7EC151"/><path d="M150 606Q150 640 184 640Q150 640 150 674Q150 640 116 640Q150 640 150 606Z" fill="#FEF2A0"/>
+<rect width="410" height="196" fill="#7EC151"/>
+<text x="40" y="92" font-family="Georgia,serif" font-weight="700" font-size="64" fill="#FEF2A0">Custom</text>
+<text x="40" y="164" font-family="Georgia,serif" font-weight="700" font-size="64" fill="#FEF2A0">Order</text>
+</svg>
