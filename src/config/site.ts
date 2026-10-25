@@ -14,9 +14,9 @@ export const siteConfig = {
 
   // === LINK ORDER (PLACEHOLDER) ===
   // Nomor WhatsApp, format 62 tanpa tanda + dan tanpa 0 di depan.
-  whatsappNumber: "6281234567890",
+  whatsappNumber: "6281385424400",
   // Link Instagram. Dipakai untuk tombol Instagram di semua produk.
-  instagramUrl: "https://www.instagram.com/iknit.it",
+  instagramUrl: "https://www.instagram.com/iknit.z",
   // TikTok tidak dipakai di katalog. Isi kalau mau muncul di footer, kosongkan kalau tidak.
   tiktokUrl: "",
 
